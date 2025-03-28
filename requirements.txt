@@ -8,3 +8,5 @@ scikit-learn
 pmdarima
 tensorflow
 torch
+darts
+fredapi
