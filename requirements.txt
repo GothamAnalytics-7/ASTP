@@ -10,3 +10,5 @@ tensorflow
 torch
 darts
 fredapi
+ipywidgets
+loky
