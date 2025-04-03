@@ -282,8 +282,8 @@ def h0_time_series(df, serie = " "):
     
     # Kolmogorov-Smirnov Test
     ks, kspval = stats.kstest(df.values, 'norm')
-    conclusion_ks = "Reject H0: Data is not from a normal distribution" if kspval < 0.05 else "Fail to reject H0: Data might be normal"
-    print(f"Kolmogorov-Smirnov Test for {serie}\nStatistic: {ks:.4f}\np-value: {kspval:.4f}\nConclusion: {conclusion_ks}\n------------------------------------------------------")
+    conclusion_ks = "Reject H0: Data is not from a normal distribution" if kspval[0] < 0.05 else "Fail to reject H0: Data might be normal"
+    print(f"Kolmogorov-Smirnov Test for {serie}\nStatistic: {ks[0]:.4f}\np-value: {kspval[0]:.4f}\nConclusion: {conclusion_ks}\n------------------------------------------------------")
     
     # Engle's ARCH Test
     lm, lmpval, fval, fpval = het_arch(df[df.columns.values[0]].values)
