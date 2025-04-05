@@ -261,7 +261,7 @@ def show_decompose(df, seasonal_periods = 5, title = " "):
 
 
 def h0_time_series(df, serie = " "):
-    print("=================\nEstudar normalidade\n=================")
+    print("======================================================\nEstudar normalidade\n======================================================")
     
     # Kurtosis Test
     k, kpval = kurtosistest(df)
@@ -290,6 +290,17 @@ def h0_time_series(df, serie = " "):
     conclusion_arch = "Reject H0: Heteroscedasticity detected" if lmpval < 0.05 else "Fail to reject H0: No significant heteroscedasticity"
     print(f"Lagrange Multiplier Test for {serie}\nStatistic: {lm:.4f}\np-value: {lmpval:.4f}\nConclusion: {conclusion_arch}\n------------------------------------------------------")
     
+    # BDS Test
+    result = bds(df[df.columns.values[0]].values, max_dim=6)
+    print("Brock Dechert and Scheinkman Test for " + serie)
+    print("Dim 2: z-static %.4f Prob %.4f" % (result[0][0], result[1][0]))
+    print("Dim 3: z-static %.4f Prob %.4f" % (result[0][1], result[1][1]))
+    print("Dim 4: z-static %.4f Prob %.4f" % (result[0][2], result[1][2]))
+    print("Dim 5: z-static %.4f Prob %.4f" % (result[0][3], result[1][3]))
+    print("Dim 6: z-static %.4f Prob %.4f" % (result[0][4], result[1][4]))
+
+    print("======================================================\nEstudar estacionaridade\n======================================================")
+
     # Augmented Dickey-Fuller Test
     result = adfuller(df[df.columns.values[0]].values, regression='c')
     print("Augmented Dickey-Fuller Test for " + serie)
@@ -314,12 +325,4 @@ def h0_time_series(df, serie = " "):
     conclusion_kpss = "Reject H0: The series is not stationary" if result[0] > critical_values['5%'] else "Fail to reject H0: The series is stationary"
     print(f"Kwiatkowski-Phillips-Schmidt-Shin Test for {serie}\nKPSS Statistic: {result[0]:.4f}\nCritical Values: {critical_values}\nConclusion: {conclusion_kpss}\n------------------------------------------------------")
 
-    # BDS Test
-    result = bds(df[df.columns.values[0]].values, max_dim=6)
-    print("Brock Dechert and Scheinkman Test for " + serie)
-    print("Dim 2: z-static %.4f Prob %.4f" % (result[0][0], result[1][0]))
-    print("Dim 3: z-static %.4f Prob %.4f" % (result[0][1], result[1][1]))
-    print("Dim 4: z-static %.4f Prob %.4f" % (result[0][2], result[1][2]))
-    print("Dim 5: z-static %.4f Prob %.4f" % (result[0][3], result[1][3]))
-    print("Dim 6: z-static %.4f Prob %.4f" % (result[0][4], result[1][4]))
     
