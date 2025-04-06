@@ -8,7 +8,7 @@ scikit-learn
 pmdarima
 tensorflow
 torch
-darts
+"u8darts[all]"
 fredapi
 ipywidgets
 loky
