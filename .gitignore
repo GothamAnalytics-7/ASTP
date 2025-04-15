@@ -3,3 +3,4 @@ venv/
 env/
 .venv
 .virtualenv/
+/notebooks/darts_logs

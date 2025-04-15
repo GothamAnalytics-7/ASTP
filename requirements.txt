@@ -12,3 +12,4 @@ torch
 fredapi
 ipywidgets
 loky
+optuna
