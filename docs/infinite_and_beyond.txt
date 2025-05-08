@@ -1,0 +1,14 @@
+- causalidade com incerteza política;
+- CNN/transformers;
+- comparação de performance entre pacotes;
+- obtenção modelo ideal arima/ets com métodos autmáticos (information criterias) 
+    VS 
+  optimização de hiperparâmetros (optuna);
+
+Conversa com o prof:
+
+- Quanto a incerteza política impacta as séries temporais!!! Qual tem mais causalidade?  Grange ou outro
+- Usar sistemas/otimização bayesiana para hiperparâmetros é uma questão?
+
+Temas:
+    - Desafios na otimização de hiperparâmetros de séries temporais
