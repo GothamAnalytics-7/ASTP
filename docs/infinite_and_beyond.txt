@@ -12,3 +12,5 @@ Conversa com o prof:
 
 Temas:
     - Desafios na otimização de hiperparâmetros de séries temporais
+
+    
