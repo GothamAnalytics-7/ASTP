@@ -9,7 +9,7 @@ Realizado por Grupo 7:
 
 Para a execução deste projeto foi desenvolvida uma forma de executar os notebooks ao alocar recursos e _background jobs_ para a GPU. Desta maneira conseguimos treinar as redes neuronais deste desafio de forma mais eficiente e rápida.
 
-# Executar os Notebooks e Redes Neuronais com GPU
+# Executar os Notebooks e Redes Neuronais (Tensorflow) com GPU
 
 Abaixo estão as instruções para configurar e executar o ambiente corretamente.
 
