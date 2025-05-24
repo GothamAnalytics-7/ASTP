@@ -13,3 +13,5 @@ fredapi
 ipywidgets
 loky
 optuna
+graphviz
+pydot
