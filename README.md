@@ -1,7 +1,5 @@
 # Análise de Séries Temporais e Previsão
 
-### Tempo para entrega do 2º Desafio:
-
 Realizado por Grupo 7:
 
 - Diogo Freitas
